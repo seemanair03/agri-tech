@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bba626f6-7840-4738-b8c0-4ad8e227f51f" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission/AgriTech_Usharani_Final Submission/CapstoneProjectAgritech/Dynamodbfiles/SprinklerDataTable.json" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/device_onboarding/config.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission/AgriTech_Usharani_Final Submission/CapstoneProjectAgritech/lambdafunctions/RawDataStorage/lambda_function.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/simulator/sensorgrp3/soil_sensor_grp3_publish.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/simulator/sensor_config_grp.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission/AgriTech_Usharani_Final Submission/CapstoneProjectAgritech/lambdafunctions/Lambda_Raw_Anamoly_Data_Detection/lambda_function.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Docs/provision/provisioning-template.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Docs/provision/provisioning-data.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission/AgriTech_Usharani_Final Submission/CapstoneProjectAgritech/Docs/policy/general_policy.json" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission/AgriTech_Usharani_Final Submission/CapstoneProjectAgritech/Scripts/sensor_config_grp.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/simulator/sensorgrp5/soil_sensor_grp5_publish.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission/AgriTech_Usharani_Final Submission/CapstoneProjectAgritech/Scripts/main.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/simulator/sensorgrp2/soil_sensor_grp2_publish.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/simulator/sensorgrp4/soil_sensor_grp4_publish.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission/AgriTech_Usharani_Final Submission/CapstoneProjectAgritech/Dynamodbfiles/deletetables.sh" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission/AgriTech_Usharani_Final Submission/CapstoneProjectAgritech/Dynamodbfiles/Raw_Data.json" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission/AgriTech_Usharani_Final Submission/CapstoneProjectAgritech/Dynamodbfiles/AnamolyTable.json" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission/AgriTech_Usharani_Final Submission/CapstoneProjectAgritech/Dynamodbfiles/createtables.sh" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="2EtNWZrtkICtzW15s6bWWzkBRC9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Capstone_SampleSol/AgriTech_Usharani_Final Submission" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\seema\Learning\GLearning\Projects\Capstone_AgriTech" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\seema\Learning\GLearning\Projects\Capstone_AgriTech\Docs\policy" />
+      <recent name="C:\Users\seema\Learning\GLearning\Projects\Capstone_AgriTech\Docs\provision" />
+      <recent name="C:\Users\seema\Learning\GLearning\Projects\Capstone_AgriTech\Lambda" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.AgriTech_Windows_StartSimulation">
+    <configuration name="AgriTech_Windows_CopyFileProgram" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_AgriTech_draft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AgriTech_Windows_CopyFileProgram.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AgriTech_Windows_StartSimulation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_AgriTech_draft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/AgriTech_Windows_StartSimulation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_AgriTech_draft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/device_onboarding" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/device_onboarding/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Capstone_AgriTech" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\seema\Learning\GLearning\Projects\Capstone_AgriTech\Lambda\main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sensor_config_grp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_AgriTech_draft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/simulator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simulator/sensor_config_grp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="soil_sensor_grp1_publish" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Capstone_AgriTech_draft" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/simulator/sensorgrp1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/simulator/sensorgrp1/soil_sensor_grp1_publish.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.AgriTech_Windows_StartSimulation" />
+        <item itemvalue="Python.sensor_config_grp" />
+        <item itemvalue="Python.soil_sensor_grp1_publish" />
+        <item itemvalue="Python.AgriTech_Windows_CopyFileProgram" />
+        <item itemvalue="Python.main (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bba626f6-7840-4738-b8c0-4ad8e227f51f" name="Changes" comment="" />
+      <created>1663410953137</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663410953137</updated>
+    </task>
+    <servers />
+  </component>
+</project>

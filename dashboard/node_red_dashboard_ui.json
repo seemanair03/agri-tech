@@ -1,0 +1,2419 @@
+[
+    {
+        "id": "c8a295e5ebdbc454",
+        "type": "tab",
+        "label": "Agritech_Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4ddaeac9ab9809a2",
+        "type": "debug",
+        "z": "c8a295e5ebdbc454",
+        "name": "iot/agritech debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "caabde4e6b4cd685",
+        "type": "switch",
+        "z": "c8a295e5ebdbc454",
+        "name": "Group",
+        "property": "payload.groupid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 570,
+        "y": 1080,
+        "wires": [
+            [
+                "5f846c14e62c1a0d",
+                "4747956648dfc5b8"
+            ],
+            [
+                "3da73da517280aa3",
+                "a45ad82386f2ee33"
+            ],
+            [
+                "a8a823a27d581436",
+                "295d97512cf586a2"
+            ],
+            [
+                "65eb89f5f5a9bfa4",
+                "069d5e225897a56f"
+            ],
+            [
+                "5f41d8103274eb84",
+                "ec176f00b459602f"
+            ]
+        ]
+    },
+    {
+        "id": "4763b4deff7d5a9f",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "JSon Praser",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 1080,
+        "wires": [
+            [
+                "caabde4e6b4cd685",
+                "4ddaeac9ab9809a2"
+            ]
+        ]
+    },
+    {
+        "id": "4747956648dfc5b8",
+        "type": "switch",
+        "z": "c8a295e5ebdbc454",
+        "name": "Group 1Sensor",
+        "property": "payload.deviceid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_4",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 880,
+        "y": 320,
+        "wires": [
+            [
+                "b30c8464373c6572",
+                "824cc3bca941e0b0"
+            ],
+            [
+                "ee4004ddbabce6bb",
+                "e56e203b1c0b5b8b"
+            ],
+            [
+                "a2bc6a3a5b1f6223",
+                "6637b50d5544a708"
+            ],
+            [
+                "41b3d966f4bb9f9d",
+                "5d42ea24b9fee2d1"
+            ]
+        ]
+    },
+    {
+        "id": "824cc3bca941e0b0",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "group": "f5d80c4d4d36941a",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S1",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1090,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e56e203b1c0b5b8b",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "group": "f5d80c4d4d36941a",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S2",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1090,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a2bc6a3a5b1f6223",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "group": "f5d80c4d4d36941a",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S3",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "x": 1090,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "41b3d966f4bb9f9d",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "group": "f5d80c4d4d36941a",
+        "order": 5,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S4",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "x": 1090,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "2df7e3febd27306e",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "S13",
+        "group": "e241aae7fe1b0e2d",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S13",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 1280,
+        "wires": []
+    },
+    {
+        "id": "a45ad82386f2ee33",
+        "type": "switch",
+        "z": "c8a295e5ebdbc454",
+        "name": "Group 2 Sensor",
+        "property": "payload.deviceid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_7",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_8",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 860,
+        "y": 740,
+        "wires": [
+            [
+                "9d3a53ff27896030",
+                "ef9cbbecfb02030f"
+            ],
+            [
+                "02f40f28196525c8",
+                "7fde4da47a0cffc3"
+            ],
+            [
+                "141e7cea050019ae",
+                "bb28cda3225d5329"
+            ],
+            [
+                "432eed10bd992d2e",
+                "88a5d91293bd3416"
+            ]
+        ]
+    },
+    {
+        "id": "a8a823a27d581436",
+        "type": "switch",
+        "z": "c8a295e5ebdbc454",
+        "name": "Group 3 Sensor",
+        "property": "payload.deviceid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_9",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_10",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_11",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_12",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 860,
+        "y": 1080,
+        "wires": [
+            [
+                "5a4952a588a36e3a",
+                "772d035954f20632"
+            ],
+            [
+                "2007ece52bb1f05b",
+                "f2de6189878bc8f4"
+            ],
+            [
+                "4acee4771a9979b6",
+                "eb4dcae426d57421"
+            ],
+            [
+                "1a40db30d921018e",
+                "e33b657fa4384d65"
+            ]
+        ]
+    },
+    {
+        "id": "65eb89f5f5a9bfa4",
+        "type": "switch",
+        "z": "c8a295e5ebdbc454",
+        "name": "Group 4 Sensor",
+        "property": "payload.deviceid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_13",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_14",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_15",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_16",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 860,
+        "y": 1400,
+        "wires": [
+            [
+                "2df7e3febd27306e",
+                "34b544830a765408"
+            ],
+            [
+                "79418137460ee318",
+                "dec00e87bdbde222"
+            ],
+            [
+                "c39370a20a1ac745",
+                "4c1f376b5b71314d"
+            ],
+            [
+                "fce42bf883c61ddf",
+                "0f116b115b533f55"
+            ]
+        ]
+    },
+    {
+        "id": "ef9cbbecfb02030f",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "group": "24374a5bb9dccd3e",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S5",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "7fde4da47a0cffc3",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "group": "24374a5bb9dccd3e",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S6",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "bb28cda3225d5329",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "group": "24374a5bb9dccd3e",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S7",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "88a5d91293bd3416",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "group": "24374a5bb9dccd3e",
+        "order": 5,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S8",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "772d035954f20632",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "group": "a377ec78cca97f76",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S9",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "2007ece52bb1f05b",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "group": "a377ec78cca97f76",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S10",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "4acee4771a9979b6",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "S11",
+        "group": "a377ec78cca97f76",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S11",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "e33b657fa4384d65",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "S12",
+        "group": "a377ec78cca97f76",
+        "order": 5,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S12",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "79418137460ee318",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "S14",
+        "group": "e241aae7fe1b0e2d",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S14",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "c39370a20a1ac745",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "S15",
+        "group": "e241aae7fe1b0e2d",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S15",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "fce42bf883c61ddf",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "S16",
+        "group": "e241aae7fe1b0e2d",
+        "order": 5,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S16",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "className": "",
+        "x": 1070,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "5f41d8103274eb84",
+        "type": "switch",
+        "z": "c8a295e5ebdbc454",
+        "name": "Group 5 Sensor",
+        "property": "payload.deviceid",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_17",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_18",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_19",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SOIL_SENS_20",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 860,
+        "y": 1760,
+        "wires": [
+            [
+                "a5dbd1e29c357a75",
+                "ed85b33b6a9e0d45"
+            ],
+            [
+                "612c33cfcdda6b50",
+                "6376e30537e320db"
+            ],
+            [
+                "16b40f31dbec4124",
+                "ccc8b4679cc33056"
+            ],
+            [
+                "f302e84aecad2ec1",
+                "9702e92b1998c14c"
+            ]
+        ]
+    },
+    {
+        "id": "a5dbd1e29c357a75",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "S17",
+        "group": "fd4f6b2dae8619a1",
+        "order": 2,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S17",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "x": 1070,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "6376e30537e320db",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "S18",
+        "group": "fd4f6b2dae8619a1",
+        "order": 3,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S18",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "x": 1070,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "ccc8b4679cc33056",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "S19",
+        "group": "fd4f6b2dae8619a1",
+        "order": 4,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S19",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "x": 1070,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "9702e92b1998c14c",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "S20",
+        "group": "fd4f6b2dae8619a1",
+        "order": 5,
+        "width": 2,
+        "height": 2,
+        "gtype": "gage",
+        "title": "S20",
+        "label": "degC",
+        "format": "{{msg.payload.soilTemperature}}",
+        "min": "10",
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "19",
+        "seg2": "35",
+        "x": 1070,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "ee4004ddbabce6bb",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M2",
+        "group": "f5d80c4d4d36941a",
+        "order": 7,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1090,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "6637b50d5544a708",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M3",
+        "group": "f5d80c4d4d36941a",
+        "order": 8,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1090,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5a4952a588a36e3a",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M9",
+        "group": "a377ec78cca97f76",
+        "order": 6,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "b30c8464373c6572",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M1",
+        "group": "f5d80c4d4d36941a",
+        "order": 6,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": "0",
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1090,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5d42ea24b9fee2d1",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M4",
+        "group": "f5d80c4d4d36941a",
+        "order": 9,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1090,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "9d3a53ff27896030",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M5",
+        "group": "24374a5bb9dccd3e",
+        "order": 6,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "02f40f28196525c8",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M6",
+        "group": "24374a5bb9dccd3e",
+        "order": 7,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "141e7cea050019ae",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M7",
+        "group": "24374a5bb9dccd3e",
+        "order": 8,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "432eed10bd992d2e",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M8",
+        "group": "24374a5bb9dccd3e",
+        "order": 9,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "f2de6189878bc8f4",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M10",
+        "group": "a377ec78cca97f76",
+        "order": 7,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "eb4dcae426d57421",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M11",
+        "group": "a377ec78cca97f76",
+        "order": 8,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "1a40db30d921018e",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M12",
+        "group": "a377ec78cca97f76",
+        "order": 9,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "34b544830a765408",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M13",
+        "group": "e241aae7fe1b0e2d",
+        "order": 6,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "dec00e87bdbde222",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M14",
+        "group": "e241aae7fe1b0e2d",
+        "order": 7,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "4c1f376b5b71314d",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M15",
+        "group": "e241aae7fe1b0e2d",
+        "order": 8,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "0f116b115b533f55",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M16",
+        "group": "e241aae7fe1b0e2d",
+        "order": 9,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 1070,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "ed85b33b6a9e0d45",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M17",
+        "group": "fd4f6b2dae8619a1",
+        "order": 6,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1070,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "612c33cfcdda6b50",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M18",
+        "group": "fd4f6b2dae8619a1",
+        "order": 7,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1070,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "16b40f31dbec4124",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M19",
+        "group": "fd4f6b2dae8619a1",
+        "order": 8,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1070,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "f302e84aecad2ec1",
+        "type": "ui_gauge",
+        "z": "c8a295e5ebdbc454",
+        "name": "M19",
+        "group": "fd4f6b2dae8619a1",
+        "order": 9,
+        "width": 2,
+        "height": 2,
+        "gtype": "wave",
+        "title": "",
+        "label": "%",
+        "format": "{{msg.payload.soilMoisture}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 1070,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "dc920c13bc17e6ed",
+        "type": "mqtt in",
+        "z": "c8a295e5ebdbc454",
+        "name": "actuator_status_data",
+        "topic": "iot/actuatorstat",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "49e3623b61eeb009",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 2320,
+        "wires": [
+            [
+                "db970124ca33ab0a"
+            ]
+        ]
+    },
+    {
+        "id": "8e2ad893ed397d3d",
+        "type": "debug",
+        "z": "c8a295e5ebdbc454",
+        "name": "iot/actuatorstat debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 2180,
+        "wires": []
+    },
+    {
+        "id": "c7c6aeaf4d7be8d2",
+        "type": "switch",
+        "z": "c8a295e5ebdbc454",
+        "name": "",
+        "property": "payload.groupId",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 590,
+        "y": 2320,
+        "wires": [
+            [
+                "16ddf36322f0712d",
+                "a10f7edb534f2f58"
+            ],
+            [
+                "81ff8e196e6c759c",
+                "148b2b8b18236546"
+            ],
+            [
+                "851fd38198bfbb2d",
+                "385315bdd1eba8b6"
+            ],
+            [
+                "0523380ec1f13c30",
+                "26d95521798bc6fa"
+            ],
+            [
+                "d047e0598bf906b5",
+                "8e71e7d95efbabf5"
+            ]
+        ]
+    },
+    {
+        "id": "33fe88344239ca3e",
+        "type": "mqtt in",
+        "z": "c8a295e5ebdbc454",
+        "name": "agritech_data",
+        "topic": "iot/agritech",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "49e3623b61eeb009",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 1080,
+        "wires": [
+            [
+                "4763b4deff7d5a9f"
+            ]
+        ]
+    },
+    {
+        "id": "d785a1a50180e27b",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "",
+        "order": 6,
+        "width": 3,
+        "height": 2,
+        "name": "grp_anomaly_state",
+        "label": "Group Anaomaly State",
+        "format": "{{msg.payload.grpAnomalyState}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "16ddf36322f0712d",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "grp1actuatordata",
+        "func": "var gled = \"<font style=\\\"color:green\\\">ON</font>\";\nvar rled = \"<font style=\\\"color:red\\\">OFF</font>\";\nvar bled = \"<font style=\\\"color:red\\\">UNKNOWN</font>\";\nif (msg.payload.actuatorCmd == 0){\n    msg.payload=rled\n} else if (msg.payload.actuatorCmd == 1){\n    msg.payload=gled\n} else {\n   msg.payload=bled\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2160,
+        "wires": [
+            [
+                "7febc247c5614b15"
+            ]
+        ]
+    },
+    {
+        "id": "7febc247c5614b15",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "f5d80c4d4d36941a",
+        "order": 11,
+        "width": 8,
+        "height": 1,
+        "name": "grp1 sprinkler state",
+        "label": "Sprinkler Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1070,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "a10f7edb534f2f58",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "grp1Anamolydata",
+        "func": "var normalstate = \"<font> Normal </font>\";\nvar anamolystage4 = \"<font> Low </font>\";\nvar anamolystage3 = \"<font> Medium to High </font>\";\nvar anamolystage2 = \"<font> Medium to High </font>\";\nvar anamolystage1 = \"<font> Critical</font>\";\n\nif (msg.payload.grpAnomalyState == 4){\n    msg.payload=anamolystage4\n} else if (msg.payload.grpAnomalyState == 3){\n    msg.payload=anamolystage3\n} else if (msg.payload.grpAnomalyState == 2) {\n    msg.payload=anamolystage2\n} else if (msg.payload.grpAnomalyState == 1) {\n    msg.payload=anamolystage1\n} else if (msg.payload.grpAnomalyState == 0) {\n    msg.payload=normalstate\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "\n",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2120,
+        "wires": [
+            [
+                "6b9491a9d1435338"
+            ]
+        ]
+    },
+    {
+        "id": "6b9491a9d1435338",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "f5d80c4d4d36941a",
+        "order": 10,
+        "width": 8,
+        "height": 1,
+        "name": "grp1 Anamoly state",
+        "label": "Severity:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1070,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "81ff8e196e6c759c",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "grp2Anamolydata",
+        "func": "var normalstate = \"<font> Normal </font>\";\nvar anamolystage4 = \"<font> Low </font>\";\nvar anamolystage3 = \"<font> Medium </font>\";\nvar anamolystage2 = \"<font> High </font>\";\nvar anamolystage1 = \"<font> Critical</font>\";\nif (msg.payload.grpAnomalyState == 4){\n    msg.payload=anamolystage4\n} else if (msg.payload.grpAnomalyState == 3){\n    msg.payload=anamolystage3\n} else if (msg.payload.grpAnomalyState == 2) {\n    msg.payload=anamolystage2\n} else if (msg.payload.grpAnomalyState == 1) {\n    msg.payload=anamolystage1\n} else if (msg.payload.grpAnomalyState == 0) {\n    msg.payload=normalstate\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2220,
+        "wires": [
+            [
+                "f5e0341e1b7af1d8"
+            ]
+        ]
+    },
+    {
+        "id": "148b2b8b18236546",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "grp2actuatordata",
+        "func": "var gled = \"<font style=\\\"color:green\\\">ON</font>\";\nvar rled = \"<font style=\\\"color:red\\\">OFF</font>\";\nvar bled = \"<font style=\\\"color:red\\\">UNKNOWN</font>\";\nif (msg.payload.actuatorCmd == 0){\n    msg.payload=rled\n} else if (msg.payload.actuatorCmd == 1){\n    msg.payload=gled\n} else {\n   msg.payload=bled\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2260,
+        "wires": [
+            [
+                "d533f50bd85f5aaa"
+            ]
+        ]
+    },
+    {
+        "id": "f5e0341e1b7af1d8",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "a377ec78cca97f76",
+        "order": 10,
+        "width": 8,
+        "height": 1,
+        "name": "grp2 Anamoly state",
+        "label": "Severity:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1070,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "d533f50bd85f5aaa",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "a377ec78cca97f76",
+        "order": 11,
+        "width": 8,
+        "height": 1,
+        "name": "grp2 sprinkler state",
+        "label": "Sprinkler Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1070,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "851fd38198bfbb2d",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "grp3Anamolydata",
+        "func": "var normalstate = \"<font> Normal </font>\";\nvar anamolystage4 = \"<font> Low </font>\";\nvar anamolystage3 = \"<font> Medium </font>\";\nvar anamolystage2 = \"<font> High </font>\";\nvar anamolystage1 = \"<font> Critical</font>\";\nif (msg.payload.grpAnomalyState == 4){\n    msg.payload=anamolystage4\n} else if (msg.payload.grpAnomalyState == 3){\n    msg.payload=anamolystage3\n} else if (msg.payload.grpAnomalyState == 2) {\n    msg.payload=anamolystage2\n} else if (msg.payload.grpAnomalyState == 1) {\n    msg.payload=anamolystage1\n} else if (msg.payload.grpAnomalyState == 0) {\n    msg.payload=normalstate\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2320,
+        "wires": [
+            [
+                "a5a35360e037f7c4"
+            ]
+        ]
+    },
+    {
+        "id": "a5a35360e037f7c4",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "e241aae7fe1b0e2d",
+        "order": 10,
+        "width": 8,
+        "height": 1,
+        "name": "grp3 Anamoly state",
+        "label": "Severity:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1070,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "385315bdd1eba8b6",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "grp3actuatordata",
+        "func": "var gled = \"<font style=\\\"color:green\\\">ON</font>\";\nvar rled = \"<font style=\\\"color:red\\\">OFF</font>\";\nvar bled = \"<font style=\\\"color:red\\\">UNKNOWN</font>\";\nif (msg.payload.actuatorCmd == 0){\n    msg.payload=rled\n} else if (msg.payload.actuatorCmd == 1){\n    msg.payload=gled\n} else {\n   msg.payload=bled\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2360,
+        "wires": [
+            [
+                "4b0aea535c54fbad"
+            ]
+        ]
+    },
+    {
+        "id": "4b0aea535c54fbad",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "e241aae7fe1b0e2d",
+        "order": 11,
+        "width": 8,
+        "height": 1,
+        "name": "grp3 sprinkler state",
+        "label": "Sprinkler Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1070,
+        "y": 2360,
+        "wires": []
+    },
+    {
+        "id": "0523380ec1f13c30",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "grp4Anamolydata",
+        "func": "var normalstate = \"<font> Normal </font>\";\nvar anamolystage4 = \"<font> Low </font>\";\nvar anamolystage3 = \"<font> Medium </font>\";\nvar anamolystage2 = \"<font> High </font>\";\nvar anamolystage1 = \"<font> Critical</font>\";\nif (msg.payload.grpAnomalyState == 4) {\n    msg.payload = anamolystage4\n} else if (msg.payload.grpAnomalyState == 3) {\n    msg.payload = anamolystage3\n} else if (msg.payload.grpAnomalyState == 2) {\n    msg.payload = anamolystage2\n} else if (msg.payload.grpAnomalyState == 1) {\n    msg.payload = anamolystage1\n} else if (msg.payload.grpAnomalyState == 0) {\n    msg.payload = normalstate\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2420,
+        "wires": [
+            [
+                "e8fe8dc8a93d3384"
+            ]
+        ]
+    },
+    {
+        "id": "e8fe8dc8a93d3384",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "24374a5bb9dccd3e",
+        "order": 10,
+        "width": 8,
+        "height": 1,
+        "name": "grp4 Anamoly state",
+        "label": "Severity:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1070,
+        "y": 2420,
+        "wires": []
+    },
+    {
+        "id": "26d95521798bc6fa",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "grp4actuatordata",
+        "func": "var gled = \"<font style=\\\"color:green\\\">ON</font>\";\nvar rled = \"<font style=\\\"color:red\\\">OFF</font>\";\nvar bled = \"<font style=\\\"color:red\\\">UNKNOWN</font>\";\nif (msg.payload.actuatorCmd == 0) {\n    msg.payload = rled\n} else if (msg.payload.actuatorCmd == 1) {\n    msg.payload = gled\n} else {\n    msg.payload = bled\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2460,
+        "wires": [
+            [
+                "9c353f1c2c515ea5"
+            ]
+        ]
+    },
+    {
+        "id": "9c353f1c2c515ea5",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "24374a5bb9dccd3e",
+        "order": 11,
+        "width": 8,
+        "height": 1,
+        "name": "grp4 sprinkler state",
+        "label": "Sprinkler Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1070,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "8e71e7d95efbabf5",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "grp5actuatordata",
+        "func": "var gled = \"<font style=\\\"color:green\\\">ON</font>\";\nvar rled = \"<font style=\\\"color:red\\\">OFF</font>\";\nvar bled = \"<font style=\\\"color:red\\\">UNKNOWN</font>\";\nif (msg.payload.actuatorCmd == 0){\n    msg.payload=rled\n} else if (msg.payload.actuatorCmd == 1){\n    msg.payload=gled\n} else {\n   msg.payload=bled\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2560,
+        "wires": [
+            [
+                "c460a83cd9688310"
+            ]
+        ]
+    },
+    {
+        "id": "d047e0598bf906b5",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "grp5Anamolydata",
+        "func": "var normalstate = \"<font> Normal </font>\";\nvar anamolystage4 = \"<font> Low </font>\";\nvar anamolystage3 = \"<font> Medium </font>\";\nvar anamolystage2 = \"<font> High </font>\";\nvar anamolystage1 = \"<font> Critical</font>\";\nif (msg.payload.grpAnomalyState == 4){\n    msg.payload=anamolystage4\n} else if (msg.payload.grpAnomalyState == 3){\n    msg.payload=anamolystage3\n} else if (msg.payload.grpAnomalyState == 2) {\n    msg.payload=anamolystage2\n} else if (msg.payload.grpAnomalyState == 1) {\n    msg.payload=anamolystage1\n} else if (msg.payload.grpAnomalyState == 0) {\n    msg.payload=normalstate\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 2520,
+        "wires": [
+            [
+                "65a0e7178c89d2c0"
+            ]
+        ]
+    },
+    {
+        "id": "65a0e7178c89d2c0",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "fd4f6b2dae8619a1",
+        "order": 10,
+        "width": 8,
+        "height": 1,
+        "name": "grp5 Anamoly state",
+        "label": "Severity:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1070,
+        "y": 2520,
+        "wires": []
+    },
+    {
+        "id": "c460a83cd9688310",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "fd4f6b2dae8619a1",
+        "order": 11,
+        "width": 8,
+        "height": 1,
+        "name": "grp5 sprinkler state",
+        "label": "Sprinkler Status:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1070,
+        "y": 2560,
+        "wires": []
+    },
+    {
+        "id": "af852b15c8ba6c78",
+        "type": "ui_template",
+        "z": "c8a295e5ebdbc454",
+        "group": "c982fbb8.1deb38",
+        "name": "Clock Toolbar",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "format": "<script id=\"titleScript\" type=\"text/javascript\">\n\n$(function() {\n    if($('.md-toolbar-tools').length != 0){\n        loadClock();\n    }else setTimeout(loadClock, 500)\n});\n\nfunction loadClock(){\n    $('#clock').remove();\n    var toolbar = $('.md-toolbar-tools');\n    \n    var div = $('<div/>');\n    var p = $('<p/ id=\"clock\">');\n    \n    div.append(p);\n    div[0].style.margin = '5px 5px 5px auto';\n    toolbar.append(div);\n\n    function displayTitle(lh) {\n        p.text(lh); \n    }\n    \n    function upTime() {\n        var d = new Date();\n        p.text(d.toLocaleString());\n    }\n\n    if(document.clockInterval){ \n            clearInterval(document.clockInterval);\n            document.clockInterval = null;\n    }\n        \n    document.clockInterval = setInterval(upTime,1000);\n}\n\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "global",
+        "className": "",
+        "x": 420,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db970124ca33ab0a",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 2320,
+        "wires": [
+            [
+                "8e2ad893ed397d3d",
+                "c7c6aeaf4d7be8d2"
+            ]
+        ]
+    },
+    {
+        "id": "02b9e76cfc0dd036",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "f5d80c4d4d36941a",
+        "order": 1,
+        "width": 8,
+        "height": 1,
+        "name": "LS1",
+        "label": "Place: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "\"colors\": #00b500",
+        "x": 1090,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "5f846c14e62c1a0d",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "Loc1 JSON parser",
+        "func": "msg.payload = msg.payload.place\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 200,
+        "wires": [
+            [
+                "02b9e76cfc0dd036",
+                "2ae157decda30aec"
+            ]
+        ]
+    },
+    {
+        "id": "2ae157decda30aec",
+        "type": "debug",
+        "z": "c8a295e5ebdbc454",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3da73da517280aa3",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "Loc2 JSON parser",
+        "func": "msg.payload = msg.payload.place\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 600,
+        "wires": [
+            [
+                "f173507e289c360e"
+            ]
+        ]
+    },
+    {
+        "id": "f173507e289c360e",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "24374a5bb9dccd3e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "LS2",
+        "label": "Place: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "\"colors\": #00b500",
+        "x": 1070,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "295d97512cf586a2",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "Loc3 JSON parser",
+        "func": "msg.payload = msg.payload.place\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 960,
+        "wires": [
+            [
+                "bbb7f6ce19dae365"
+            ]
+        ]
+    },
+    {
+        "id": "bbb7f6ce19dae365",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "a377ec78cca97f76",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "LS3",
+        "label": "Place: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "\"colors\": #00b500",
+        "x": 1070,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "069d5e225897a56f",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "Loc4 JSON parser",
+        "func": "msg.payload = msg.payload.place\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 1320,
+        "wires": [
+            [
+                "5b39858d6f2a5ca7"
+            ]
+        ]
+    },
+    {
+        "id": "5b39858d6f2a5ca7",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "e241aae7fe1b0e2d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "LS4",
+        "label": "Place: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "\"colors\": #00b500",
+        "x": 1070,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "ec176f00b459602f",
+        "type": "function",
+        "z": "c8a295e5ebdbc454",
+        "name": "Loc5 JSON parser",
+        "func": "msg.payload = msg.payload.place\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 1680,
+        "wires": [
+            [
+                "ce8cb20250ab5043"
+            ]
+        ]
+    },
+    {
+        "id": "ce8cb20250ab5043",
+        "type": "ui_text",
+        "z": "c8a295e5ebdbc454",
+        "group": "fd4f6b2dae8619a1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "LS5",
+        "label": "Place: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "\"colors\": #00b500",
+        "x": 1070,
+        "y": 1600,
+        "wires": []
+    },
+    {
+        "id": "1a8dedd1722a40e9",
+        "type": "ui_spacer",
+        "z": "c8a295e5ebdbc454",
+        "name": "spacer",
+        "group": "19e92f5312cb18bb",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "05b2208c366a066b",
+        "type": "ui_spacer",
+        "z": "c8a295e5ebdbc454",
+        "name": "spacer",
+        "group": "19e92f5312cb18bb",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "dc9d2773a39b12c8",
+        "type": "ui_spacer",
+        "z": "c8a295e5ebdbc454",
+        "name": "spacer",
+        "group": "19e92f5312cb18bb",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a9d5a869ae272d1e",
+        "type": "ui_spacer",
+        "z": "c8a295e5ebdbc454",
+        "name": "spacer",
+        "group": "19e92f5312cb18bb",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "bd445bed3864e9f7",
+        "type": "ui_spacer",
+        "z": "c8a295e5ebdbc454",
+        "name": "spacer",
+        "group": "",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "f9e0e5d62edca398",
+        "type": "ui_spacer",
+        "z": "c8a295e5ebdbc454",
+        "name": "spacer",
+        "group": "",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "3d2037d5b6c93eb9",
+        "type": "ui_spacer",
+        "z": "c8a295e5ebdbc454",
+        "name": "spacer",
+        "group": "",
+        "order": 7,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "7f89653c2faee981",
+        "type": "ui_spacer",
+        "z": "c8a295e5ebdbc454",
+        "name": "spacer",
+        "group": "",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "8387d869aa07fef9",
+        "type": "ui_spacer",
+        "z": "c8a295e5ebdbc454",
+        "name": "spacer",
+        "group": "",
+        "order": 10,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "852716c6fb1a0eb1",
+        "type": "ui_spacer",
+        "z": "c8a295e5ebdbc454",
+        "name": "spacer",
+        "group": "",
+        "order": 11,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "f5d80c4d4d36941a",
+        "type": "ui_group",
+        "name": "Sensor Group 1 ",
+        "tab": "9399a15d8bb2f7a2",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "e241aae7fe1b0e2d",
+        "type": "ui_group",
+        "name": "Sensor Group 4",
+        "tab": "9399a15d8bb2f7a2",
+        "order": 4,
+        "disp": true,
+        "width": "8",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "24374a5bb9dccd3e",
+        "type": "ui_group",
+        "name": "Sensor Group 2",
+        "tab": "9399a15d8bb2f7a2",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "a377ec78cca97f76",
+        "type": "ui_group",
+        "name": "Sensor Group 3",
+        "tab": "9399a15d8bb2f7a2",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "fd4f6b2dae8619a1",
+        "type": "ui_group",
+        "name": "Sensor Group 5",
+        "tab": "9399a15d8bb2f7a2",
+        "order": 5,
+        "disp": true,
+        "width": "8",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "49e3623b61eeb009",
+        "type": "mqtt-broker",
+        "name": "IOTG2_MQTT_BROKER",
+        "broker": "ajta2yw0ktjf6-ats.iot.us-east-1.amazonaws.com",
+        "port": "8883",
+        "tls": "f7b35cfcdf227969",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "120",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": "",
+        "credentials": {}
+    },
+    {
+        "id": "c982fbb8.1deb38",
+        "type": "ui_group",
+        "name": "hidden_group",
+        "tab": "7c447e96.4b96a",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "19e92f5312cb18bb",
+        "type": "ui_group",
+        "name": "Chart Group",
+        "tab": "7a780c31101558a1",
+        "order": 2,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9399a15d8bb2f7a2",
+        "type": "ui_tab",
+        "name": "Agritech Water Management",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f7b35cfcdf227969",
+        "type": "tls-config",
+        "name": "CERTS_KEY",
+        "cert": "C:\\Users\\seema\\Learning\\GLearning\\Projects\\AgriTech_SeemaNair_FinalSubmission\\simulator\\actuator1\\SPRINK_ACT_1.pem.crt",
+        "key": "C:\\Users\\seema\\Learning\\GLearning\\Projects\\AgriTech_SeemaNair_FinalSubmission\\simulator\\actuator1\\SPRINK_ACT_1.pem.key",
+        "ca": "C:\\Users\\seema\\Learning\\GLearning\\Projects\\AgriTech_SeemaNair_FinalSubmission\\simulator\\actuator1\\AmazonRootCA1.pem",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": "",
+        "credentials": {}
+    },
+    {
+        "id": "7c447e96.4b96a",
+        "type": "ui_tab",
+        "name": "System",
+        "icon": "home",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7a780c31101558a1",
+        "type": "ui_tab",
+        "d": true,
+        "name": "Agritech Analytics",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
